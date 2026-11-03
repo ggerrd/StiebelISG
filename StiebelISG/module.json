@@ -1,0 +1,11 @@
+{
+    "id": "{A41C6F08-2D97-4E35-B1A6-90E7D25C3F18}",
+    "name": "StiebelISG",
+    "type": 3,
+    "vendor": "STIEBEL ELTRON",
+    "aliases": ["Stiebel Eltron ISG", "Internet Service Gateway"],
+    "parentRequirements": [],
+    "childRequirements": [],
+    "implemented": [],
+    "prefix": "ISG"
+}

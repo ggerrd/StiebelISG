@@ -1,0 +1,1010 @@
+{
+ "params": [
+  {
+   "id": 1,
+   "page": "0",
+   "group": "Start",
+   "name": "Betriebsart",
+   "type": "enum",
+   "radio": "val1s",
+   "options": {
+    "1": "STANDBY MODE",
+    "2": "PROGRAMMODE",
+    "3": "COMFORTMODE",
+    "4": "ECOMODE",
+    "5": "DHW MODE"
+   }
+  },
+  {
+   "id": 10120,
+   "page": "3,7",
+   "group": "Partyprogramm",
+   "name": "PARTYPROGRAMM",
+   "type": "int",
+   "min": 0.0,
+   "max": 24.0,
+   "step": 1.0,
+   "unit": "h"
+  },
+  {
+   "id": 11,
+   "page": "3,8",
+   "group": "Ferien Beginn",
+   "name": "TAG",
+   "type": "int",
+   "min": 1.0,
+   "max": 31.0,
+   "step": 1.0,
+   "unit": ""
+  },
+  {
+   "id": 10,
+   "page": "3,8",
+   "group": "Ferien Beginn",
+   "name": "MONAT",
+   "type": "int",
+   "min": 1.0,
+   "max": 12.0,
+   "step": 1.0,
+   "unit": ""
+  },
+  {
+   "id": 9,
+   "page": "3,8",
+   "group": "Ferien Beginn",
+   "name": "JAHR",
+   "type": "int",
+   "min": 0.0,
+   "max": 99.0,
+   "step": 1.0,
+   "unit": ""
+  },
+  {
+   "id": 14,
+   "page": "3,8,1",
+   "group": "Ferien Ende",
+   "name": "TAG",
+   "type": "int",
+   "min": 1.0,
+   "max": 31.0,
+   "step": 1.0,
+   "unit": ""
+  },
+  {
+   "id": 13,
+   "page": "3,8,1",
+   "group": "Ferien Ende",
+   "name": "MONAT",
+   "type": "int",
+   "min": 1.0,
+   "max": 12.0,
+   "step": 1.0,
+   "unit": ""
+  },
+  {
+   "id": 12,
+   "page": "3,8,1",
+   "group": "Ferien Ende",
+   "name": "JAHR",
+   "type": "int",
+   "min": 0.0,
+   "max": 99.0,
+   "step": 1.0,
+   "unit": ""
+  },
+  {
+   "id": 10915,
+   "page": "3,10",
+   "group": "Antilegionellen",
+   "name": "MONTAG",
+   "type": "enum",
+   "radio": "val10915",
+   "options": {
+    "0": "AUS",
+    "1": "EIN"
+   }
+  },
+  {
+   "id": 10916,
+   "page": "3,10",
+   "group": "Antilegionellen",
+   "name": "DIENSTAG",
+   "type": "enum",
+   "radio": "val10916",
+   "options": {
+    "0": "AUS",
+    "1": "EIN"
+   }
+  },
+  {
+   "id": 10917,
+   "page": "3,10",
+   "group": "Antilegionellen",
+   "name": "MITTWOCH",
+   "type": "enum",
+   "radio": "val10917",
+   "options": {
+    "0": "AUS",
+    "1": "EIN"
+   }
+  },
+  {
+   "id": 10918,
+   "page": "3,10",
+   "group": "Antilegionellen",
+   "name": "DONNERSTAG",
+   "type": "enum",
+   "radio": "val10918",
+   "options": {
+    "0": "AUS",
+    "1": "EIN"
+   }
+  },
+  {
+   "id": 10919,
+   "page": "3,10",
+   "group": "Antilegionellen",
+   "name": "FREITAG",
+   "type": "enum",
+   "radio": "val10919",
+   "options": {
+    "0": "AUS",
+    "1": "EIN"
+   }
+  },
+  {
+   "id": 10920,
+   "page": "3,10",
+   "group": "Antilegionellen",
+   "name": "SAMSTAG",
+   "type": "enum",
+   "radio": "val10920",
+   "options": {
+    "0": "AUS",
+    "1": "EIN"
+   }
+  },
+  {
+   "id": 10921,
+   "page": "3,10",
+   "group": "Antilegionellen",
+   "name": "SONNTAG",
+   "type": "enum",
+   "radio": "val10921",
+   "options": {
+    "0": "AUS",
+    "1": "EIN"
+   }
+  },
+  {
+   "id": 6,
+   "page": "4,0",
+   "group": "Zeit",
+   "name": "STUNDE",
+   "type": "int",
+   "min": 0.0,
+   "max": 23.0,
+   "step": 1.0,
+   "unit": ""
+  },
+  {
+   "id": 7,
+   "page": "4,0",
+   "group": "Zeit",
+   "name": "MINUTE",
+   "type": "int",
+   "min": 0.0,
+   "max": 59.0,
+   "step": 1.0,
+   "unit": ""
+  },
+  {
+   "id": 5,
+   "page": "4,0,1",
+   "group": "Datum",
+   "name": "JAHR",
+   "type": "int",
+   "min": 0.0,
+   "max": 99.0,
+   "step": 1.0,
+   "unit": ""
+  },
+  {
+   "id": 4,
+   "page": "4,0,1",
+   "group": "Datum",
+   "name": "MONAT",
+   "type": "int",
+   "min": 1.0,
+   "max": 12.0,
+   "step": 1.0,
+   "unit": ""
+  },
+  {
+   "id": 3,
+   "page": "4,0,1",
+   "group": "Datum",
+   "name": "TAG",
+   "type": "int",
+   "min": 1.0,
+   "max": 31.0,
+   "step": 1.0,
+   "unit": ""
+  },
+  {
+   "id": 99,
+   "page": "4,1",
+   "group": "Sommerzeit Beginn",
+   "name": "TAG",
+   "type": "int",
+   "min": 1.0,
+   "max": 31.0,
+   "step": 1.0,
+   "unit": ""
+  },
+  {
+   "id": 100,
+   "page": "4,1",
+   "group": "Sommerzeit Beginn",
+   "name": "MONAT",
+   "type": "int",
+   "min": 1.0,
+   "max": 12.0,
+   "step": 1.0,
+   "unit": ""
+  },
+  {
+   "id": 101,
+   "page": "4,1,1",
+   "group": "Sommerzeit Ende",
+   "name": "TAG",
+   "type": "int",
+   "min": 1.0,
+   "max": 31.0,
+   "step": 1.0,
+   "unit": ""
+  },
+  {
+   "id": 102,
+   "page": "4,1,1",
+   "group": "Sommerzeit Ende",
+   "name": "MONAT",
+   "type": "int",
+   "min": 1.0,
+   "max": 12.0,
+   "step": 1.0,
+   "unit": ""
+  },
+  {
+   "id": 10976,
+   "page": "4,2",
+   "group": "Heizen HK1",
+   "name": "KOMFORT TEMPERATUR",
+   "type": "float",
+   "min": 5.0,
+   "max": 30.0,
+   "step": 0.1,
+   "unit": "°C"
+  },
+  {
+   "id": 10977,
+   "page": "4,2",
+   "group": "Heizen HK1",
+   "name": "ECO TEMPERATUR",
+   "type": "float",
+   "min": 5.0,
+   "max": 30.0,
+   "step": 0.1,
+   "unit": "°C"
+  },
+  {
+   "id": 486,
+   "page": "4,2",
+   "group": "Heizen HK1",
+   "name": "MINIMAL TEMPERATUR",
+   "type": "float",
+   "min": 10.0,
+   "max": 30.0,
+   "step": 0.5,
+   "unit": "°C"
+  },
+  {
+   "id": 25,
+   "page": "4,2",
+   "group": "Heizen HK1",
+   "name": "STEIGUNG HEIZKURVE",
+   "type": "double",
+   "min": 0.0,
+   "max": 3.0,
+   "step": 0.01,
+   "unit": ""
+  },
+  {
+   "id": 10980,
+   "page": "4,2,1",
+   "group": "Heizen HK2",
+   "name": "KOMFORT TEMPERATUR",
+   "type": "float",
+   "min": 5.0,
+   "max": 30.0,
+   "step": 0.1,
+   "unit": "°C"
+  },
+  {
+   "id": 10981,
+   "page": "4,2,1",
+   "group": "Heizen HK2",
+   "name": "ECO TEMPERATUR",
+   "type": "float",
+   "min": 5.0,
+   "max": 30.0,
+   "step": 0.1,
+   "unit": "°C"
+  },
+  {
+   "id": 487,
+   "page": "4,2,1",
+   "group": "Heizen HK2",
+   "name": "MINIMAL TEMPERATUR",
+   "type": "float",
+   "min": 10.0,
+   "max": 30.0,
+   "step": 0.5,
+   "unit": "°C"
+  },
+  {
+   "id": 10982,
+   "page": "4,2,1",
+   "group": "Heizen HK2",
+   "name": "MAXIMAL TEMPERATUR",
+   "type": "float",
+   "min": 20.0,
+   "max": 90.0,
+   "step": 0.5,
+   "unit": "°C"
+  },
+  {
+   "id": 10983,
+   "page": "4,2,1",
+   "group": "Heizen HK2",
+   "name": "MISCHERDYNAMIK",
+   "type": "int",
+   "min": 30.0,
+   "max": 240.0,
+   "step": 1.0,
+   "unit": ""
+  },
+  {
+   "id": 26,
+   "page": "4,2,1",
+   "group": "Heizen HK2",
+   "name": "STEIGUNG HEIZKURVE",
+   "type": "double",
+   "min": 0.0,
+   "max": 3.0,
+   "step": 0.01,
+   "unit": ""
+  },
+  {
+   "id": 10986,
+   "page": "4,2,2",
+   "group": "Heizen HK3",
+   "name": "KOMFORT TEMPERATUR",
+   "type": "float",
+   "min": 5.0,
+   "max": 30.0,
+   "step": 0.1,
+   "unit": "°C"
+  },
+  {
+   "id": 10987,
+   "page": "4,2,2",
+   "group": "Heizen HK3",
+   "name": "ECO TEMPERATUR",
+   "type": "float",
+   "min": 5.0,
+   "max": 30.0,
+   "step": 0.1,
+   "unit": "°C"
+  },
+  {
+   "id": 10988,
+   "page": "4,2,2",
+   "group": "Heizen HK3",
+   "name": "MINIMAL TEMPERATUR",
+   "type": "float",
+   "min": 10.0,
+   "max": 30.0,
+   "step": 0.5,
+   "unit": "°C"
+  },
+  {
+   "id": 10989,
+   "page": "4,2,2",
+   "group": "Heizen HK3",
+   "name": "MAXIMAL TEMPERATUR",
+   "type": "float",
+   "min": 20.0,
+   "max": 90.0,
+   "step": 0.5,
+   "unit": "°C"
+  },
+  {
+   "id": 10990,
+   "page": "4,2,2",
+   "group": "Heizen HK3",
+   "name": "MISCHERDYNAMIK",
+   "type": "int",
+   "min": 30.0,
+   "max": 240.0,
+   "step": 1.0,
+   "unit": ""
+  },
+  {
+   "id": 10991,
+   "page": "4,2,2",
+   "group": "Heizen HK3",
+   "name": "STEIGUNG HEIZKURVE",
+   "type": "double",
+   "min": 0.0,
+   "max": 3.0,
+   "step": 0.01,
+   "unit": ""
+  },
+  {
+   "id": 10992,
+   "page": "4,2,2",
+   "group": "Heizen HK3",
+   "name": "RAUMEINFLUSS",
+   "type": "int",
+   "min": 0.0,
+   "max": 100.0,
+   "step": 5.0,
+   "unit": "%"
+  },
+  {
+   "id": 450,
+   "page": "4,2,3",
+   "group": "Heizen Grundeinstellung",
+   "name": "PUFFERBETRIEB",
+   "type": "enum",
+   "radio": "val450",
+   "options": {
+    "0": "AUS",
+    "1": "EIN"
+   }
+  },
+  {
+   "id": 11010,
+   "page": "4,2,3",
+   "group": "Heizen Grundeinstellung",
+   "name": "MAXIMALE RÜCKLAUFTEMP",
+   "type": "float",
+   "min": 30.0,
+   "max": 65.0,
+   "step": 0.5,
+   "unit": "°C"
+  },
+  {
+   "id": 38,
+   "page": "4,2,3",
+   "group": "Heizen Grundeinstellung",
+   "name": "MAXIMALE VORLAUFTEMP",
+   "type": "float",
+   "min": 20.0,
+   "max": 75.0,
+   "step": 0.5,
+   "unit": "°C"
+  },
+  {
+   "id": 35,
+   "page": "4,2,3",
+   "group": "Heizen Grundeinstellung",
+   "name": "FESTWERTBETRIEB",
+   "type": "float",
+   "min": 20.0,
+   "max": 70.0,
+   "step": 0.1,
+   "unit": "°C"
+  },
+  {
+   "id": 45,
+   "page": "4,2,3",
+   "group": "Heizen Grundeinstellung",
+   "name": "FROSTSCHUTZ",
+   "type": "float",
+   "min": -10.0,
+   "max": 10.0,
+   "step": 0.1,
+   "unit": "°C"
+  },
+  {
+   "id": 103,
+   "page": "4,2,4",
+   "group": "Heizen Sommerbetrieb",
+   "name": "SOMMERBETRIEB",
+   "type": "enum",
+   "radio": "val103",
+   "options": {
+    "0": "AUS",
+    "1": "EIN"
+   }
+  },
+  {
+   "id": 104,
+   "page": "4,2,4",
+   "group": "Heizen Sommerbetrieb",
+   "name": "GEBÄUDEDÄMPFUNG",
+   "type": "int",
+   "min": 0.0,
+   "max": 3.0,
+   "step": 1.0,
+   "unit": ""
+  },
+  {
+   "id": 106,
+   "page": "4,2,5",
+   "group": "Heizen Pumpenzyklen",
+   "name": "PUMPENZYKLEN",
+   "type": "enum",
+   "radio": "val106",
+   "options": {
+    "0": "AUS",
+    "1": "EIN"
+   }
+  },
+  {
+   "id": 41,
+   "page": "4,2,6",
+   "group": "Heizen El. Nacherwärmung",
+   "name": "BIVALENZTEMPERATUR HZG",
+   "type": "float",
+   "min": -20.0,
+   "max": 40.0,
+   "step": 0.5,
+   "unit": "°C"
+  },
+  {
+   "id": 43,
+   "page": "4,2,6",
+   "group": "Heizen El. Nacherwärmung",
+   "name": "UNTERE EINSATZGRENZE HZG",
+   "type": "float",
+   "min": -20.0,
+   "max": -15.0,
+   "step": 0.5,
+   "unit": "°C"
+  },
+  {
+   "id": 413,
+   "page": "4,2,6",
+   "group": "Heizen El. Nacherwärmung",
+   "name": "ANZAHL STUFEN",
+   "type": "int",
+   "min": 0.0,
+   "max": 3.0,
+   "step": 1.0,
+   "unit": ""
+  },
+  {
+   "id": 414,
+   "page": "4,2,6",
+   "group": "Heizen El. Nacherwärmung",
+   "name": "VERZÖGERUNGSZEIT",
+   "type": "int",
+   "min": 1.0,
+   "max": 60.0,
+   "step": 1.0,
+   "unit": "min"
+  },
+  {
+   "id": 11018,
+   "page": "4,3",
+   "group": "Warmwasser",
+   "name": "KOMFORT TEMPERATUR",
+   "type": "float",
+   "min": 10.0,
+   "max": 60.0,
+   "step": 0.1,
+   "unit": "°C"
+  },
+  {
+   "id": 11019,
+   "page": "4,3",
+   "group": "Warmwasser",
+   "name": "ECO TEMPERATUR",
+   "type": "float",
+   "min": 10.0,
+   "max": 60.0,
+   "step": 0.1,
+   "unit": "°C"
+  },
+  {
+   "id": 375,
+   "page": "4,3,1",
+   "group": "Warmwasser Grundeinstellung",
+   "name": "DHW MODE",
+   "type": "enum",
+   "radio": "val375",
+   "options": {
+    "0": "VORRANGBETRIEB",
+    "1": "PARALLELBETRIEB",
+    "2": "TEILVORRANG"
+   }
+  },
+  {
+   "id": 120,
+   "page": "4,3,1",
+   "group": "Warmwasser Grundeinstellung",
+   "name": "WARMWASSERHYSTERESE",
+   "type": "float",
+   "min": 1.0,
+   "max": 15.0,
+   "step": 0.1,
+   "unit": "K"
+  },
+  {
+   "id": 399,
+   "page": "4,3,1",
+   "group": "Warmwasser Grundeinstellung",
+   "name": "WARMWASSERSTUFEN",
+   "type": "int",
+   "min": 1.0,
+   "max": 1.0,
+   "step": 1.0,
+   "unit": ""
+  },
+  {
+   "id": 123,
+   "page": "4,3,2",
+   "group": "Warmwasser Lernfunktion",
+   "name": "WW LERNFUNKTION",
+   "type": "enum",
+   "radio": "val123",
+   "options": {
+    "0": "AUS",
+    "1": "EIN"
+   }
+  },
+  {
+   "id": 454,
+   "page": "4,3,3",
+   "group": "Warmwasser Kombispeicher",
+   "name": "KOMBISPEICHER",
+   "type": "enum",
+   "radio": "val454",
+   "options": {
+    "0": "AUS",
+    "1": "EIN"
+   }
+  },
+  {
+   "id": 1126,
+   "page": "4,3,4",
+   "group": "Warmwasser Leistung WP",
+   "name": "WW LEISTUNG SOMMER",
+   "type": "int",
+   "min": 5.0,
+   "max": 15.0,
+   "step": 1.0,
+   "unit": "kW"
+  },
+  {
+   "id": 1127,
+   "page": "4,3,4",
+   "group": "Warmwasser Leistung WP",
+   "name": "WW LEISTUNG WINTER",
+   "type": "int",
+   "min": 5.0,
+   "max": 15.0,
+   "step": 1.0,
+   "unit": "kW"
+  },
+  {
+   "id": 372,
+   "page": "4,3,5",
+   "group": "Warmwasser Max. Vorlauf",
+   "name": "MAXIMALE VORLAUFTEMP",
+   "type": "float",
+   "min": 20.0,
+   "max": 75.0,
+   "step": 0.1,
+   "unit": "°C"
+  },
+  {
+   "id": 122,
+   "page": "4,3,6",
+   "group": "Warmwasser Antilegionellen",
+   "name": "ANTILEGIONELLENBEHANDLUNG",
+   "type": "enum",
+   "radio": "val122",
+   "options": {
+    "0": "AUS",
+    "1": "EIN"
+   }
+  },
+  {
+   "id": 11033,
+   "page": "4,3,6",
+   "group": "Warmwasser Antilegionellen",
+   "name": "SOLLTEMPERATUR",
+   "type": "float",
+   "min": 50.0,
+   "max": 65.0,
+   "step": 0.1,
+   "unit": "°C"
+  },
+  {
+   "id": 42,
+   "page": "4,3,7",
+   "group": "Warmwasser El. Nacherwärmung",
+   "name": "BIVALENZTEMPERATUR WW",
+   "type": "float",
+   "min": -18.0,
+   "max": 40.0,
+   "step": 0.5,
+   "unit": "°C"
+  },
+  {
+   "id": 44,
+   "page": "4,3,7",
+   "group": "Warmwasser El. Nacherwärmung",
+   "name": "UNTERE EINSATZGRENZE WW",
+   "type": "float",
+   "min": -20.0,
+   "max": -18.0,
+   "step": 0.5,
+   "unit": "°C"
+  },
+  {
+   "id": 11037,
+   "page": "4,3,8",
+   "group": "Warmwasser Zirkulation",
+   "name": "ANFORDERUNG",
+   "type": "enum",
+   "radio": "val11037",
+   "options": {
+    "0": "AUS",
+    "1": "PROGRAMM",
+    "2": "PROGRAMM + EINGANG",
+    "3": "PROGRAMM + FÜHLER"
+   }
+  },
+  {
+   "id": 11042,
+   "page": "4,7",
+   "group": "Kühlen",
+   "name": "KÜHLEN",
+   "type": "enum",
+   "radio": "val11042",
+   "options": {
+    "0": "AUS",
+    "1": "EIN"
+   }
+  },
+  {
+   "id": 377,
+   "page": "4,7,1",
+   "group": "Kühlen Grundeinstellung",
+   "name": "KÜHLSTUFEN",
+   "type": "int",
+   "min": 1.0,
+   "max": 1.0,
+   "step": 1.0,
+   "unit": ""
+  },
+  {
+   "id": 457,
+   "page": "4,7,1",
+   "group": "Kühlen Grundeinstellung",
+   "name": "GRENZE KÜHLEN",
+   "type": "float",
+   "min": 15.0,
+   "max": 40.0,
+   "step": 0.1,
+   "unit": "°C"
+  },
+  {
+   "id": 1128,
+   "page": "4,7,1",
+   "group": "Kühlen Grundeinstellung",
+   "name": "LEISTUNG KÜHLEN",
+   "type": "float",
+   "min": 4.0,
+   "max": 17.0,
+   "step": 0.1,
+   "unit": "kW"
+  },
+  {
+   "id": 11059,
+   "page": "4,7,1",
+   "group": "Kühlen Grundeinstellung",
+   "name": "HYSTERESE VORLAUFTEMP",
+   "type": "float",
+   "min": 4.0,
+   "max": 10.0,
+   "step": 0.1,
+   "unit": "K"
+  },
+  {
+   "id": 11073,
+   "page": "4,7,2",
+   "group": "Kühlkreis 3",
+   "name": "KÜHLKREIS",
+   "type": "enum",
+   "radio": "val11073",
+   "options": {
+    "0": "AUS",
+    "1": "EIN"
+   }
+  },
+  {
+   "id": 11074,
+   "page": "4,7,2",
+   "group": "Kühlkreis 3",
+   "name": "VORLAUFSOLLTEMPERATUR",
+   "type": "float",
+   "min": 15.0,
+   "max": 25.0,
+   "step": 0.1,
+   "unit": "°C"
+  },
+  {
+   "id": 11075,
+   "page": "4,7,2",
+   "group": "Kühlkreis 3",
+   "name": "RAUMSOLLTEMPERATUR",
+   "type": "float",
+   "min": 20.0,
+   "max": 30.0,
+   "step": 0.1,
+   "unit": "°C"
+  },
+  {
+   "id": 11076,
+   "page": "4,7,2",
+   "group": "Kühlkreis 3",
+   "name": "KÜHLART",
+   "type": "enum",
+   "radio": "val11076",
+   "options": {
+    "0": "GEBLÄSEKÜHLUNG",
+    "1": "FLÄCHENKÜHLUNG"
+   }
+  },
+  {
+   "id": 60305,
+   "page": "4,13",
+   "group": "Energiemanagement",
+   "name": "SGREADY AKTIVIERT",
+   "type": "enum",
+   "radio": "val60305",
+   "options": {
+    "0": "AUS",
+    "1": "EIN"
+   }
+  },
+  {
+   "id": 60317,
+   "page": "4,13",
+   "group": "Energiemanagement",
+   "name": "Heizungspuffer",
+   "type": "enum",
+   "radio": "val60317",
+   "options": {
+    "0": "kein Puffer",
+    "1": "Puffer mit Mischer",
+    "2": "Puffer ohne Mischer"
+   }
+  },
+  {
+   "id": 60310,
+   "page": "4,13",
+   "group": "Energiemanagement",
+   "name": "OBERE RAUM/PUFFERTEMP. HK1",
+   "type": "float",
+   "min": 20.0,
+   "max": 50.0,
+   "step": 0.1,
+   "unit": "°C"
+  },
+  {
+   "id": 60311,
+   "page": "4,13",
+   "group": "Energiemanagement",
+   "name": "OBERE RAUMTEMP. HK2",
+   "type": "float",
+   "min": 20.0,
+   "max": 30.0,
+   "step": 0.1,
+   "unit": "°C"
+  },
+  {
+   "id": 60312,
+   "page": "4,13",
+   "group": "Energiemanagement",
+   "name": "OBERE WARMWASSER SOLLTEMP.",
+   "type": "float",
+   "min": 40.0,
+   "max": 60.0,
+   "step": 0.5,
+   "unit": "°C"
+  },
+  {
+   "id": 60101,
+   "page": "4,14",
+   "group": "ISG",
+   "name": "CAN-Intervall",
+   "type": "int",
+   "min": 70.0,
+   "max": 250.0,
+   "step": 1.0,
+   "unit": "ms"
+  }
+ ],
+ "programs": [
+  {
+   "page": "3,0",
+   "name": "Heizprogramm HK1",
+   "base": 130
+  },
+  {
+   "page": "3,0,1",
+   "name": "Heizprogramm HK2",
+   "base": 151
+  },
+  {
+   "page": "3,0,2",
+   "name": "Heizprogramm HK3",
+   "base": 10773
+  },
+  {
+   "page": "3,1",
+   "name": "Warmwasserprogramm",
+   "base": 10840
+  },
+  {
+   "page": "3,3",
+   "name": "Zirkulationsprogramm",
+   "base": 10924
+  },
+  {
+   "page": "3,5",
+   "name": "Silentprogramm 1",
+   "base": 600
+  },
+  {
+   "page": "3,6",
+   "name": "Silentprogramm 2",
+   "base": 621
+  }
+ ],
+ "status_pages": [
+  "1,0",
+  "1,1",
+  "2,0",
+  "2,2",
+  "2,9",
+  "0"
+ ],
+ "slow_pages": [
+  "2,4",
+  "2,6",
+  "2,7"
+ ],
+ "table_pages": [
+  "1,0",
+  "1,1",
+  "2,0",
+  "2,2",
+  "2,4",
+  "2,6",
+  "2,7"
+ ],
+ "system_pages": [
+  "3,9",
+  "5,0",
+  "5,2",
+  "5,3"
+ ]
+}

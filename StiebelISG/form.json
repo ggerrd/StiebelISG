@@ -1,0 +1,35 @@
+{
+    "elements": [
+        { "type": "ValidationTextBox", "name": "Host", "caption": "IP-Adresse des ISG" },
+        { "type": "CheckBox", "name": "Active", "caption": "Abfrage aktiv" },
+        { "type": "Label", "caption": "Das ISG braucht rund 5 Sekunden pro Seite. Das Modul ruft darum je Takt nur eine Seite ab." },
+        { "type": "NumberSpinner", "name": "TickSeconds", "caption": "Takt: eine Seite alle", "suffix": "s", "minimum": 5 },
+        { "type": "NumberSpinner", "name": "StatusSeconds", "caption": "Status und Prozessdaten aktualisieren alle", "suffix": "s", "minimum": 30 },
+        { "type": "NumberSpinner", "name": "SettingsSeconds", "caption": "Einstellungen aktualisieren alle", "suffix": "s", "minimum": 300 },
+        { "type": "CheckBox", "name": "AllowSystemSettings", "caption": "Änderungen an Netzwerk, Proxy, Sprache und Anlagenbild erlauben (ISG_SetNetwork usw.)" },
+        { "type": "Label", "caption": "Variablen: Abgewählte Variablen werden nach dem Übernehmen gelöscht, auch ihre Werte. Messwerte erscheinen in der Liste, sobald das ISG sie zum ersten Mal meldet." },
+        {
+            "type": "List",
+            "name": "Variables",
+            "caption": "Variablen",
+            "rowCount": 20,
+            "add": false,
+            "delete": false,
+            "columns": [
+                { "caption": "Aktiv", "name": "Enabled", "width": "70px", "add": false, "edit": { "type": "CheckBox" } },
+                { "caption": "Art", "name": "Category", "width": "120px", "add": "" },
+                { "caption": "Variable", "name": "Name", "width": "auto", "add": "" },
+                { "caption": "Ident", "name": "Ident", "width": "0px", "add": "", "visible": false }
+            ]
+        }
+    ],
+    "actions": [
+        { "type": "Button", "caption": "Alles neu einlesen", "onClick": "ISG_RefreshAll($id);" }
+    ],
+    "status": [
+        { "code": 102, "icon": "active", "caption": "Verbunden" },
+        { "code": 104, "icon": "inactive", "caption": "Abfrage deaktiviert" },
+        { "code": 201, "icon": "error", "caption": "ISG nicht erreichbar" },
+        { "code": 202, "icon": "error", "caption": "IP-Adresse fehlt" }
+    ]
+}
