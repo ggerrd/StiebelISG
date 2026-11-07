@@ -50,6 +50,11 @@ class StiebelISG extends IPSModule
     {
         parent::ApplyChanges();
 
+        if ($this->normalizeVariables()) {
+            // Die Auswahl wurde mit Ident neu gespeichert, IPS_ApplyChanges ruft ApplyChanges erneut auf.
+            return;
+        }
+
         $this->registerCatalogVariables();
         $this->syncReadings();
         $this->SetBuffer('Due', '');
@@ -71,18 +76,11 @@ class StiebelISG extends IPSModule
     public function GetConfigurationForm()
     {
         $form = json_decode(file_get_contents(__DIR__ . '/form.json'), true);
-        $names = array_map(function ($definition) {
-            return $definition['name'];
-        }, $this->definitions()) + $this->readings();
-        $rows = [];
-        foreach ($names as $ident => $name) {
-            $ident = (string) $ident;
-            $rows[] = ['Ident' => $ident, 'Enabled' => $this->isActive($ident), 'Category' => self::CATEGORIES[$ident[0]], 'Name' => $name];
+        $rows = $this->formRows();
+        foreach ($rows as &$row) {
+            $row['Enabled'] = $this->isActive($row['Ident']);
         }
-        $order = array_flip(array_values(array_unique(self::CATEGORIES)));
-        usort($rows, function ($a, $b) use ($order) {
-            return $order[$a['Category']] <=> $order[$b['Category']];
-        });
+        unset($row);
         foreach ($form['elements'] as &$element) {
             if (($element['name'] ?? '') === 'Variables') {
                 $element['values'] = $rows;
@@ -258,6 +256,57 @@ class StiebelISG extends IPSModule
     }
 
     // ---------------------------------------------------------------- Variablen
+
+    /** Zeilen der Auswahlliste in Formular-Reihenfolge (Kategorie, innerhalb der Kategorie wie im Katalog). */
+    private function formRows(): array
+    {
+        $names = array_map(function ($definition) {
+            return $definition['name'];
+        }, $this->definitions()) + $this->readings();
+        $order = array_flip(array_values(array_unique(self::CATEGORIES)));
+        $rows = [];
+        $index = 0;
+        foreach ($names as $ident => $name) {
+            $ident = (string) $ident;
+            $category = self::CATEGORIES[$ident[0]];
+            $rows[] = ['Ident' => $ident, 'Enabled' => false, 'Category' => $category, 'Name' => $name, '_sort' => [$order[$category], $index++]];
+        }
+        usort($rows, function ($a, $b) {
+            return $a['_sort'] <=> $b['_sort'];
+        });
+        return array_map(function ($row) {
+            unset($row['_sort']);
+            return $row;
+        }, $rows);
+    }
+
+    /**
+     * Symcon speichert aus der Liste nur die bearbeitbare Spalte "Enabled", nicht den Ident.
+     * Solche Eintraege werden hier ueber ihre Position den Formularzeilen zugeordnet und mit Ident gespeichert.
+     * Gibt true zurueck, wenn die Eigenschaft neu geschrieben wurde.
+     */
+    private function normalizeVariables(): bool
+    {
+        $stored = json_decode($this->ReadPropertyString('Variables'), true) ?: [];
+        if ($stored === [] || count(array_filter($stored, function ($entry) {
+            return !isset($entry['Ident']);
+        })) === 0) {
+            return false;
+        }
+        $rows = $this->formRows();
+        if (count($rows) !== count($stored)) {
+            $this->LogMessage(sprintf('Variablenauswahl ohne Ident (%d Eintraege) passt nicht zur Liste (%d Zeilen) und wird ignoriert.', count($stored), count($rows)), KL_WARNING);
+            return false;
+        }
+        $normalized = [];
+        foreach (array_values($stored) as $position => $entry) {
+            $ident = $entry['Ident'] ?? $rows[$position]['Ident'];
+            $normalized[] = ['Ident' => $ident, 'Enabled' => (bool) ($entry['Enabled'] ?? false)];
+        }
+        IPS_SetProperty($this->InstanceID, 'Variables', json_encode($normalized));
+        IPS_ApplyChanges($this->InstanceID);
+        return true;
+    }
 
     private function isActive(string $ident): bool
     {
